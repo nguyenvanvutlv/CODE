@@ -14,14 +14,13 @@ int main()
     int dem = 0;
     cin>>A>>B;
 
-    if(A.size()<B.size())
+    if (A.size()<B.size())
     {
-        swap(A,B);
+        A.insert(0,B.size()-A.size(),'0');
     }
-    long long Tong = A.size()-B.size();
-    for(long long i = 0; i<Tong; i++)
+    else
     {
-        B.insert(0,1,'0');
+        B.insert(0,A.size()-B.size(),'0');
     }
 
     for(long long i = A.size()-1; i>=0; i--)
